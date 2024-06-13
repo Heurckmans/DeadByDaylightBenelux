@@ -1,0 +1,17 @@
+{{ define "main" }}
+    
+    <div class="streamers">
+        <div class="streamers-container">
+            <h1 class="streamers-title">Streamers</h1>
+            <div class="streamers-items">
+                {{ range .Pages.ByDate.Reverse }}
+                <a target="_blank" class="streamers-card" href="https://twitch.tv/{{.Title}}">
+                    <img class="streamers-card-image" src="../images/{{ replace .Title " " "-" | lower }}.png" alt="">
+                    <h3 class="streamers-card-title"> {{ .Title }} </h3>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+{{end}}

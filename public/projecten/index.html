@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeBeneLuxDe - Projecten</title>
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/bundle.min.9648fe7526b9f661d0852485bbd0afb326d104699f2b28f969539b23d0253a7d.css" integrity="sha256-lkj&#43;dSa59mHQhSSFu9CvsybRBGmfKyj5aVObI9AlOn0=" />
+    <script src="/js/nav.js"></script>
+</head>
+
+    <body>
+        <header class="header">
+    <div class="header-container">
+        <a href="/" class="header-logo">
+            <img src="/images/bgImage.png" alt="">
+        </a>
+        <nav class="header-nav">
+            <div class="header-nav-toggler">
+                <p id="header-nav-open" onclick="togglenav()" class="header-nav-item ">Menu</p>         
+                <p id="header-nav-close" onclick="togglenav()" class="header-nav-item d-none">Close</p>         
+            </div>
+            <div id="header-mobile-nav" class="header-nav-menu">
+                <a href="/" class="header-nav-item">Home</a>
+                <a href="/overmij" class="header-nav-item">Over mij</a>
+                <a href="/streamers" class="header-nav-item">Streamers</a>
+                <a href="/guides" class="header-nav-item">Guides</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+        
+    
+    <div class="projecten">
+        <div class="projecten-container">
+            <h1 class="projecten-title">Projecten</h1>
+            <div class="projecten-filter-buttons">
+                <p>Filter op:</p>
+                
+                
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                
+                    <button class="filter-button" data-tag="Trapper">Trapper</button>
+                
+                    <button class="filter-button" data-tag="Wraith">Wraith</button>
+                
+            </div>
+            <div class="projecten-items">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const filterButtons = document.querySelectorAll('.filter-button');
+    let lastSelectedTag = null; 
+
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            
+            const selectedTag = this.getAttribute('data-tag');
+
+            
+            const contentItems = document.querySelectorAll('.project-card');
+
+            
+            if (lastSelectedTag === selectedTag) {
+                
+                contentItems.forEach(item => item.style.display = 'block');
+                lastSelectedTag = null; 
+            } else {
+                
+                contentItems.forEach(item => item.style.display = 'none');
+
+                
+                contentItems.forEach(item => {
+                    if (item.getAttribute('data-tags').includes(selectedTag)) {
+                        item.style.display = 'block';
+                    }
+                });
+
+                
+                lastSelectedTag = selectedTag;
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            
+            filterButtons.forEach(btn => btn.classList.remove('filter-button-selected'));
+            
+            this.classList.add('filter-button-selected');
+            
+        });
+    });
+});
+
+        </script>
+
+
+        <footer class="footer">
+    <div class="footer-container">
+        <p class="footer-copyright">Gemaakt door Roebah.</p>
+        <div class="footer-nav">
+            <a class="footer-nav-item" href="/">Home</a>
+            <a class="footer-nav-item" href="/overmij">About me</a>
+            <a class="footer-nav-item" href="/stage">Stage</a>
+            <a class="footer-nav-item" href="/projecten">Projecten</a>
+        </div>
+    </div>
+</footer>
+
+        
+
+        
+
+    </body>
+</html>

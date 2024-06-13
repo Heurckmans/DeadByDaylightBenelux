@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ruben Heurckmans - Raspberry Pi Nas</title>
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/bundle.min.5cc960dea48cac9bb99b4871faae5b8aec94ce2224fc21d5f02906247dec9c93.css" integrity="sha256-XMlg3qSMrJu5m0hx&#43;q5biuyUziIk/CHV8CkGJH3snJM=" />
+    <script src="/js/nav.js"></script>
+</head>
+
+    <body>
+        <header class="header">
+    <div class="header-container">
+        <a href="/" class="header-logo">
+            Ruben H.
+        </a>
+        <nav class="header-nav">
+            <div class="header-nav-toggler">
+                <p id="header-nav-open" onclick="togglenav()" class="header-nav-item ">Menu</p>         
+                <p id="header-nav-close" onclick="togglenav()" class="header-nav-item d-none">Close</p>         
+            </div>
+            <div id="header-mobile-nav" class="header-nav-menu">
+                <a href="/" class="header-nav-item">Home</a>
+                <a href="/overmij" class="header-nav-item">Over mij</a>
+                <a href="/stage" class="header-nav-item">Stage</a>
+                
+                <a href="/projecten" class="header-nav-item">Projecten</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+        
+    
+    <div class="project">
+        <div class="project-container">
+        
+            <h1 class="project-title">Raspberry Pi Nas</h1>
+            <div class="project-date">6 Sep 2021</div>
+
+            <div class="content">
+                <p>In het eerste jaar van mijn bachelors opleiding kregen we het vak IoT Essentials. Bij dit vak werden we verplicht om een Raspberry Pi aan te schaffen.
+Na het slagen van dit vak vond ik het zonde om hier dan niets meer mee te doen aangezien het toch een nuttig stukje hardware kan zijn.</p>
+<p>Daardoor ben ik op zoek gegaan naar verschillende projecten die ik er mee zou kunnen realiseren.</p>
+<p>Toen stoote ik op een video van NetworkChuck op Youtube. Hierin maakte hij van zijn Raspberry Pi een Nas waarmee je niet alleen lokaal maar ook remote mee kon verbinden.</p>
+<p>Aangezien ik de Pi toch niet gebruikte en ik nog een externe HDD had liggen van 4Tb die niet gebruikt werd. Dacht ik dat dit het ideale project was.</p>
+<p>In dit project leer je hoe je een Pi klaarmaakt voor gebruik door er een OS op te zetten. Ik had gekozen voor de Raspberry Pi OS Lite image.
+Met het gebruik van de Raspberry Pi Imager was dit process heel makkelijk en daardoor kon ik ookal op voorhand SSH en andere instellingen configureren.</p>
+<p>Natuurlijk is de basis kennis van linux nodig, deze had ik gelukkig al door zowel het vak Linux Essentials als IoT Essentials.</p>
+<p>Na het voorbereiden van de Pi, installeerde ik OpenMediaVault.
+Vanaf dat OMV geïnstalleerd staat kan je via je browser connecteren met je PI met het IP adres.
+Nu dat OMV op je Pi staat begin je met de configuratie.</p>
+<p>In de configuratie mount je, je HDD, maak je een shared folder, dit is uiteindelijk de folder waar je toegang tot krijgt in je NAS.</p>
+<p>Als dit gedaan is moet je, je service kiezen. Ik koos hierbij voor SMB aangezien ik windows gebruik.
+Om dit aan te zetten is het met OMV heel simpel te doen door gewoon de enable slider aan te zetten en dan je shared folder te kiezen.</p>
+<p>Vanaf dit moment is het gewoon een netwerk locatie toevoegen met het IP adres van je PI met dan de naam van je shared folder.
+Aan de hand van welke users je geconfigureerd hebt moet je een username en wachtwoord ingeven, en dan kan je aan je files.</p>
+<p>Natuurlijk is het leuk om lokaal aan mijn files te kunnen maar dan kan ik even goed de HDD rechtstreeks connecteren aan mijn pc.
+Dus ging ik een stapje verder, ik maakte het ook mogelijk om remote aan mijn bestanden te kunnen met de FTP server.</p>
+<p>Uiteindelijk had ik voor elk gezinslid een shared folder gemaakt en hadden we een basic private cloud.</p>
+<p>Door dit project heb ik wat meer kennis gekregen over de basisprincipes van netwerken zoals port forwarding en netwerkconfiguratie.
+Daarnaast wat meer kennis over opslagbeheer en de verschillende bestandssystemen zoals ext4 en NTFS.</p>
+<p><img src="/images/raspberry-pi-nas-1.png" alt="Alt text">
+<img src="/images/raspberry-pi-nas-2.png" alt="Alt text"></p>
+
+            </div>
+
+            
+
+        </div>
+    </div>
+
+
+
+        <footer class="footer">
+    <div class="footer-container">
+        <p class="footer-copyright">Portfolio Ruben Heurckmans.</p>
+        <div class="footer-nav">
+            <a class="footer-nav-item" href="/">Home</a>
+            <a class="footer-nav-item" href="/overmij">About me</a>
+            <a class="footer-nav-item" href="/stage">Stage</a>
+            <a class="footer-nav-item" href="/projecten">Projecten</a>
+        </div>
+    </div>
+</footer>
+
+        
+
+        
+
+    </body>
+</html>
